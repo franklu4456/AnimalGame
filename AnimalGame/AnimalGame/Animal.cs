@@ -16,7 +16,7 @@ namespace AnimalGame
         protected bool _hasFainted;
         protected int _level;
 
-        // ?
+        // Did we miss it
         protected string _species;
 
         //protected Attack<list> attacks;
