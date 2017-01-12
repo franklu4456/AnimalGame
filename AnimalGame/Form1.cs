@@ -16,5 +16,25 @@ namespace AnimalGame
         {
             InitializeComponent();
         }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            pnlStore.Visible = false;
+        }
+
+        private void btnScrollUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnScrollDown_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

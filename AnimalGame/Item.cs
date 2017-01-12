@@ -12,6 +12,30 @@ namespace AnimalGame
         private int _statNumber;
         private int _quantity;
 
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+        }
+
+        public int StatNumber
+        {
+            get
+            {
+                return _statNumber;
+            }
+        }
+
+        public int Quantity
+        {
+            get
+            {
+                return _quantity;
+            }
+        }
+
         public Item(string name, int statNumber, int quantity)
         {
             _name = name;

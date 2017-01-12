@@ -1,1 +1,4 @@
 E:\AnimalGame\AnimalGame\bin\Debug\AnimalGame.exe.config
+E:\AnimalGame\AnimalGame\obj\Debug\AnimalGame.csprojResolveAssemblyReference.cache
+E:\AnimalGame\AnimalGame\obj\Debug\AnimalGame.Properties.Resources.resources
+E:\AnimalGame\AnimalGame\obj\Debug\AnimalGame.csproj.GenerateResource.Cache
