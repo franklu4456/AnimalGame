@@ -13,32 +13,74 @@ namespace AnimalGame
         protected int _attack;
         protected int _defense;
         protected int _speed;
-        protected bool _hasFainted;
         protected int _level;
+        protected Type _species;
 
-        // Did we miss it
-        protected string _species;
+        protected Attack[] _attackArray = new Attack[3];
 
-        //protected Attack<list> attacks;
 
-        public Animal(int maxHealth, int attack, int defense, int speed, string species)
+        public Animal(int maxHealth, int attack, int defense, int speed, Type species, int level,Attack attack1, Attack attack2, Attack attack3)
         {
             _maxHealth = maxHealth;
             _currentHealth = maxHealth;
             _attack = attack;
             _defense = defense;
             _speed = speed;
-            _hasFainted = false;
-            _level = 1;
+            _level = level;
             _species = species;
+            _attackArray[0] = attack1;
+            _attackArray[1] = attack2;
+            _attackArray[2] = attack3;
         }
+
+        public bool Evolve
+        {
+            get
+            {
+                if (_level >= 2)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        public Type Species
+        {
+            get
+            {
+                return _species;
+            }
+        }
+        public int Level
+        {
+            set
+            {
+                _level = value;
+            }
+            get
+            {
+                return _level;
+            }
+        }
+        
 
         public int Health
         {
             get
             {
-                // Should we check hasFainted
+                if (_currentHealth > _maxHealth)
+                {
+                    _currentHealth = _maxHealth;
+                }
                 return _currentHealth;
+            }
+            set
+            {
+                //change later!!
+                _currentHealth = value;
             }
         }
 
@@ -58,11 +100,27 @@ namespace AnimalGame
             }
         }
 
+        public int Speed
+        {
+            get
+            {
+
+                return _speed;
+            }
+        }
+
         public bool HasFainted
         {
             get
             {
-                return _hasFainted;
+                if (_currentHealth <= 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
         
