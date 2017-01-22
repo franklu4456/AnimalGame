@@ -89,11 +89,16 @@ namespace AnimalGame
                 currentAnimal.Health = currentAnimal.Health + buff.StatNumber;
                 buff.Quantity--;
             }
+            else if (buff.StatEffect == Stat.MaxHeal)
+            {
+                currentAnimal.Health = currentAnimal.MaxHealth;
+                buff.Quantity--;
+            }
         }
 
-        public Animal UsedNet(Animal enemy, bool inBattle)
+        public Animal UsedNet(Animal enemy, bool isWild)
         {
-            if (inBattle == false)
+            if (isWild == true)
             {
                 Random numberGenerator = new Random();
                 int randomChance = numberGenerator.Next(1, 11);
